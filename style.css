@@ -25,35 +25,51 @@ body{
 	background-color: rgba(0,0,0,0.2);
 	cursor: pointer;
 }
+#toggle-btn.active{
+	background-color: rgba(255,255,255,0.2);
+	color: #000;
+}
 #sidebar{
+	position: fixed;
+	left: 0;
+	box-sizing: initial;
 	width: 60px;
 	height: 100vh;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.73);
+	overflow-x: hidden;
 }
 #sidebar.active{
 	width: 250px;
 }
 #sidenav a{
 	text-decoration: none;
+
 }
 #list{
 	position: absolute;
 	top: 150px;
 	left: 0px;
+		
 }
 
 #list a{
-	display: block;
+	display: flex;
     color: #fff;
-	margin: 10px;	
 }
 #list a i{
-	padding: 10px;
 	position: relative;
 	top: 5px;
+	min-width: 60px;
+	height: 60px;
+	line-height: 10px;
+	text-align: center;
 }
-#list a span{
-	margin-left: 10px;
+#list a p{
+	position: relative;
+	height: 60px;
+	line-height: 20px;
+	text-align: center;
+	white-space: normal;
 }
 
 #social-links{

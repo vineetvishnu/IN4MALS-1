@@ -20,13 +20,13 @@
 				<a href="#">
 					<i class="material-icons" title="Home">
 						cottage
-					</i><span>Home</span>
+					</i><p>Home</p>
 				</a>
 				<a href="#">
-					<i class="material-icons" title="about us">person</i><span>About Us</span>
+					<i class="material-icons" title="about us">person</i><p>About Us</p>
 				</a>
 				<a href="#">
-					<i class="material-icons" title="Departments">language</i><span>Departments</span>
+					<i class="material-icons" title="Departments">language</i><p>Departments</p>
 				</a>
 			</div>
 			<div id="social-links">
@@ -38,11 +38,16 @@
 		</div>
 	</nav>
 </body>
+	
+	
+	
 <script>
 	
 	function openMenu(){
+		document.querySelector('#toggle-btn').classList.toggle('active');
 		document.querySelector('#sidebar').classList.toggle('active');
 		document.querySelector('#social-links').classList.toggle('new');
+		
 	}
 	</script>
 </html>

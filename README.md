@@ -1,1 +1,1 @@
-# IN4MALS-
+# IN4MALS

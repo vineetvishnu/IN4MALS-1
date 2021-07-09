@@ -1,0 +1,86 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	background-image: linear-gradient(to bottom right, #fff, rgba(0,0,0,0.4) );
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#toggle-btn{
+	color: #fff;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	padding: 10px;
+	background-color: #000;
+	font-size: 20px;
+	z-index: 100;
+}
+#toggle-btn:hover{
+	background-color: rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+#sidebar{
+	width: 60px;
+	height: 100vh;
+	background: rgba(0,0,0,0.7);
+	transition: 0.5s ease;
+
+}
+#sidebar.active{
+	width: 250px;
+}
+#sidenav a{
+	text-decoration: none;
+}
+#list{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+}
+
+#list a{
+	display: block;
+    color: #fff;
+	margin: 10px;	
+}
+#list a i{
+	padding: 10px;
+	position: relative;
+	top: 5px;
+}
+#list a span{
+	margin-left: 10px;
+}
+
+#social-links{
+	position: absolute;
+	bottom: 0;
+	font-size: 18px;
+	transition: 0.5s ease;
+	flex-wrap: wrap;
+}
+#social-links.new{
+	display: flex;
+}
+#social-links a{
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin: 8px;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+	border: 1.5px solid rgba(255,255,255,0.6);
+	transition: 0.3s ease-in;
+}
+#social-links a:hover{
+	background-color: rgba(255,255,255,0.6);
+	color: rgba(0,0,0,0.7);
+}

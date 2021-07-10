@@ -18,36 +18,68 @@
 		<div id="sidenav">
 			<div id="list">
 				<a href="#">
-					<i class="material-icons" title="Home">
-						cottage
-					</i><p>Home</p>
+					<i class="material-icons" title="About Us">
+						groups
+					</i>
+					<p>About Us</p>
 				</a>
 				<a href="#">
-					<i class="material-icons" title="about us">person</i><p>About Us</p>
+					<i class="material-icons" title="about us"></i>
+					<p></p>
 				</a>
 				<a href="#">
-					<i class="material-icons" title="Departments">language</i><p>Departments</p>
+					<i class="material-icons" title="Departments">language</i>
+					<p>Departments</p>
 				</a>
 			</div>
 			<div id="social-links">
 				<a href="#" class="icon fa fa-facebook"></a>
 				<a href="#" class="icon fa fa-instagram"></a>
 				<a href="#" class="icon fa fa-youtube"></a>
-				<a href="#" class="icon fa fa-twitter"></a>
+				<a href="#" class="icon fa fa-linkedin"></a>
 			</div>
 		</div>
 	</nav>
+	<!--Side Navigation Bar-->
+
+	<!----=================================
+===========================================---->
+
+	<!--Main Content-->
+
+	<!--logo-->
+
+	<div id="informal-logo"><a href="index.html"><img src="image/IN4mals_logo.jpeg" alt="in4mals-logo"></a></div>
+
+	<!--Search bar-->
+
+	<form action="javascript:" class="search-bar">
+		<input type="search" name="search"  required placeholder="Search">
+		<button class="search-btn" type="submit">
+			<span class="material-icons">search</span>
+		</button>
+	</form>
+
+<!--	Hero Section-->
+	
+	<section id="hero">
+	
+	<div class="hero-image">
+<!--		<img src="image/kiitimage.jpg">-->
+		</div>
+	</section>
+	
 </body>
-	
-	
-	
+
+
+
 <script>
-	
-	function openMenu(){
+	function openMenu() {
 		document.querySelector('#toggle-btn').classList.toggle('active');
+
 		document.querySelector('#sidebar').classList.toggle('active');
 		document.querySelector('#social-links').classList.toggle('new');
-		
+		document.body.style.backgroundImage = "linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 20%))";
+
 	}
-	</script>
-</html>
+</script></html>

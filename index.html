@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width, initial-scale = 1.0">
-	<link rel="icon" href=".image/IN4mals_logo.jpeg" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--	Favicon -->
+	<link rel="icon" href=".image/IN4mals_logo.jpeg" />
+
+	<!--	Bootstrap Link (Stylesheet)-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- Bootstrap Dropdown Hover CSS -->
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+
+	<!--	Bootstrap Scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap Dropdown Hover JS -->
+	<script src="js/bootstrap-dropdownhover.min.js"></script>
+
+	<!--	Material Icons Link-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<!--	Font Awesome Icons-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--	W3 CSS link-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!--	External Style Sheet // CSS -->
 	<link rel="stylesheet" href="./style.css">
+
+
 	<title>IN4MALS</title>
 </head>
 
@@ -24,67 +51,27 @@
 					<p>About Us</p>
 				</a>
 				<a href="#">
-					<i class="material-icons" title="about us"></i>
-					<p></p>
+					<i class="material-icons" title="Departments">language</i>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button w3-transparent">Departments</button>
+						<div class="w3-dropdown-content w3-bar-block w3-border">
+							<a href="#" class="w3-bar-item">Photography</a>
+							<a href="#" class="w3-bar-item">Art</a>
+							<a href="#" class="w3-bar-item">Music</a>
+							<a href="#" class="w3-bar-item">Dance</a>
+							<a href="#" class="w3-bar-item">Creative Writing</a>
+							<a href="#" class="w3-bar-item">Gaming</a>
+							<a href="#" class="w3-bar-item">Coding</a>
+							<a href="#" class="w3-bar-item">Fashion</a>
+						</div>
+					</div>
 				</a>
-				<style>
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-</style>
-</head>
-<body>
-
-
-<div class="dropdown">
-  <button class="dropbtn">Department </button>
-  <div class="dropdown-content">
-    <a href="#">dept 1</a>
-    <a href="#">dept 2</a>
-    <a href="#">dept 3</a>
-    <a href="#">dept 4</a>
-    <a href="#">dept 5</a>
-    <a href="#">dept 6</a>
-    <a href="#">dept 7</a>
-    <a href="#">dept 8</a>
-  </div>
-</div>
+			</div>
 			<div id="social-links">
-				<a href="#" class="icon fa fa-facebook"></a>
-				<a href="#" class="icon fa fa-instagram"></a>
-				<a href="#" class="icon fa fa-youtube"></a>
-				<a href="#" class="icon fa fa-linkedin"></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-youtube"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
 			</div>
 		</div>
 	</nav>
@@ -94,49 +81,29 @@
 ===========================================---->
 
 	<!--Main Content-->
+	<section id="main-content">
+		<header>
+			<!--logo-->
 
-	<header>
-		<!--logo-->
-
-		<div id="informal-logo"><a href="index.html"><img src="image/IN4mals_logo.jpeg" alt="in4mals-logo"></a></div>
+			<div id="informal-logo"><a href="index.html"><img src="image/IN4MALS_logo1.jpeg" alt="in4mals-logo"></a></div>
 
 
-		<!--Page Title-->
-		<div id="page-title">
-			<h1>IN4MALS SOCIETY</h1>
-			<p>DESIGNED FOR BEGINNING, ENGINEERED TO LAST!</p>
-		</div>
-
-		<!--Search bar-->
-
-		<form action="javascript:" class="search-bar">
-			<input type="search" name="search" required placeholder="Search">
-			<button class="search-btn" type="submit">
-				<span class="material-icons">search</span>
-			</button>
-		</form>
-	</header>
-
-		<!--	Hero Section-->
-
-		<section id="hero">
-
-			<div class="hero-image">
-				<!--		<img src="image/kiitimage.jpg">-->
+			<!--Page Title-->
+			<div id="page-title">
+				<div class="page-title-society-name">
+					<h1>IN4MALS SOCIETY<span class="line"></span></h1>
+				</div>
+				<div class="page-title-description">
+					<p>DESIGNED FOR BEGINNING, ENGINEERED TO LAST!</p>
+				</div>
 			</div>
-		</section>
+		</header>
 
+
+
+	</section>
 </body>
 
+<script src="main.js"></script>
 
-
-<script>
-	function openMenu() {
-		document.querySelector('#toggle-btn').classList.toggle('active');
-
-		document.querySelector('#sidebar').classList.toggle('active');
-		document.querySelector('#social-links').classList.toggle('new');
-		document.body.style.backgroundImage = "linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 20%))";
-
-	}
-</script></html>
+</html>

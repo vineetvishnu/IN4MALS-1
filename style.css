@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
 
-*{
+* {
 	padding: 0;
 	margin: 0;
 }
-body{
+
+body {
 	width: 100vw;
 	height: 100vh;
-	background: #fff;
-		overflow-x: hidden;
+	color: #fff;
+	background: url(image/bodybg.jpg);
+	background-attachment: fixed;
+	filter: blur(.2px);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow-x: hidden;
+}
+
+#main-content {
+	margin-left: 60px;
 }
 
 /* =============Sidebar============ */
 
 
-#toggle-btn{
+#toggle-btn {
 	color: #fff;
 	position: fixed;
 	left: 10px;
@@ -26,42 +37,52 @@ body{
 	font-size: 20px;
 	z-index: 100;
 }
-#toggle-btn:hover{
-	background-color: rgba(0,0,0,0.2);
+
+#toggle-btn:hover {
+	background-color: rgba(0, 0, 0, 0.2);
 	cursor: pointer;
 }
-#toggle-btn.active{
-	background-color: rgba(255,255,255,0.2);
+
+#toggle-btn.active {
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	background-color: rgba(255, 255, 255, 0.2);
 }
-#sidebar{
+
+#sidebar {
 	position: fixed;
 	left: 0;
 	box-sizing: initial;
 	width: 60px;
 	height: 100vh;
-	background: rgba(0,0,0,1);
 	overflow-x: hidden;
 	z-index: 2;
+	background: rgba(0, 0, 0, 0.65);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(2.5px);
+	-webkit-backdrop-filter: blur(2.5px);
+	border-radius: 10px;
 }
-#sidebar.active{
+
+#sidebar.active {
 	width: 250px;
 }
-#sidenav a{
-	text-decoration: none;
 
+#sidenav a {
+	text-decoration: none;
 }
-#list{
+
+#list {
 	position: absolute;
 	top: 150px;
 	left: 0px;
-		
 }
 
-#list a{
+#list a {
 	display: flex;
-    color: #fff;
+	color: #fff;
 }
-#list a i{
+
+#list a i {
 	position: relative;
 	top: 5px;
 	min-width: 60px;
@@ -69,135 +90,179 @@ body{
 	line-height: 10px;
 	text-align: center;
 }
-#list a p{
-	position: relative;
-	height: 60px;
-	line-height: 20px;
-	text-align: center;
-	white-space: normal;
+
+
+
+/*Drodown button*/
+.w3-dropdown-content {
+	background: rgba(2, 2, 75, 0.80);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(8.0px);
+	-webkit-backdrop-filter: blur(8.0px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.w3-bar-item{
+	border-radius: 10px;
+}
+.w3-bar-item:hover{
+	background-color: #000;
 }
 
-#social-links{
+/*Social links*/
+
+#social-links {
 	position: absolute;
 	bottom: 5px;
-	font-size: 22px;
+	font-size: 24px;
 	transition: 0.5s ease;
 }
-#social-links.new{
+
+#social-links.new {
 	left: 10px;
 	bottom: 20px;
 	display: flex;
 	flex-direction: row-reverse;
 }
-#social-links a{
+
+#social-links a {
 	display: block;
-	width: 18px;
-	height: 18px;
-	margin: 10px 8px;
-	padding: 10px;
+	margin: 15px 10px;
 	color: #fff;
-	border-radius: 10px;
 	transition: 0.3s ease-in;
 }
-#social-links a:nth-child(1){
-	text-align: end;
-	background-color: #fff;
-	color:#481a9c; 
-}
-#social-links a:nth-child(2){
-	background-image: linear-gradient(to right bottom, #0000dd, #ddee00); 
-}
-#social-links a:nth-child(3){
-	color:#fff; 
-	background-color: #bb0000;
-}
-#social-links a:nth-child(4){
-	background-color:#481a9c; 
-}
-#social-links a:hover{
-	color: rgba(0,0,0,0.7);
+
+#social-links a .fa {
+	width: 38px;
+	height: 38px;
+	padding: 0;
+	display: grid;
+	place-items: center;
+	border-radius: 10px;
+	transition: 0.3s ease-in;
+
 }
 
-@media (max-width: 520px){
-	#sidebar{
+.fa-facebook {
+	background-color: #fff;
+	color: #481a9c;
+}
+
+.fa-instagram {
+	font-size: 32px;
+	background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.fa-youtube {
+	color: #fff;
+	background-color: #bb0000;
+}
+
+.fa-linkedin {
+	background-color: #481a9c;
+}
+
+#social-links a .fa:hover {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 520px) {
+	#sidebar {
 		width: 0px;
 	}
-	#toggle-btn:hover{
+
+	#toggle-btn:hover {
 		background-color: rgb(0 0 0 / 100%);
 	}
-	
+
 }
 
 /*=========Main Content==========*/
 
 /*==========logo=========*/
-header{
+header {
 	padding: 30px 0 0 90px;
 	width: 100vw;
 	display: flex;
+
 }
 
-#informal-logo img{
+#informal-logo img {
 	width: 200px;
 	height: auto;
-}
-@media (max-width: 520px){
+	background: rgba(255, 255, 255, 0.65);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
+
+
+
+@media (max-width: 520px) {}
 
 /*==========Page Title========*/
 
-#page-title{
+#page-title {
 	text-align: center;
-	padding: 95px 150px;
+	padding: 50px 60px;
 }
 
-#page-title p{
+#page-title p {
 	font-family: 'Lemonada', cursive;
+	font-size: 1.4em;
 }
 
 
-/*==========Search Bar========*/
-
-.search-bar{
-	padding: 100px;
-}
-.search-bar input{
-	width: 100px;
-	padding: 10px;
-	font-size: 15px;
-	border: 0.1px solid;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-	outline: none;
-	transition: 0.8s ease;
-}
-
-.search-btn{
+.page-title-society-name h1 {
 	position: relative;
-	top: 5.4px;
-	left: -5px;
-	padding: 5.56px;
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
-	background-color: #dd0000;
-	color: #fff;
-	border: 0.1px solid;
+	font-size: 5em;
+	letter-spacing: 8px;
+	color: #115263;
+	text-transform: capitalize;
+	width: 100%;
+	text-align: center;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+	line-height: .7em;
+	outline: none;
+	animation: animate 5s linear infinite;
+	font-weight: 600;
 }
-.search-btn:hover{
-	cursor: pointer;
+
+@keyframes animate {
+
+	0%,
+	18%,
+	20%,
+	40%,
+	60.1%,
+	67%,
+	80%,
+	90.1%,
+	92% {
+		color: #115263;
+		text-shadow: none;
+	}
+
+	18.1%,
+	20.1%,
+	50%,
+	60%,
+	67.1%,
+	80.1%,
+	90%,
+	92.1%,
+	100% {
+		color: #fff;
+		text-shadow: 0 0 10px #03bcf4,
+			0 0 20px #03bcf4,
+			0 0 40px #03bcf4,
+			0 0 80px #03bcf4,
+			0 0 160px #03bcf4;
+	}
 }
 
-/*===============Hero Section===========*/
-
-#hero{
-	width: 100vw;
-	height: 500px;
-	background:linear-gradient(rgb(0 0 0 / 70%), transparent), url(image/kiitimage.jpg);
-	background: ;
-	background-attachment: scroll;
-	background-size: contain;
-	background-repeat: no-repeat;
-	z-index: -1;
-
+.page-title-description {
+	font-size: 18px;
+	margin-top: 50px;
 }

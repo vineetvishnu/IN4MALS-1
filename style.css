@@ -231,28 +231,12 @@ header {
 
 @keyframes animate {
 
-	0%,
-	18%,
-	20%,
-	40%,
-	60.1%,
-	67%,
-	80%,
-	90.1%,
-	92% {
+	0%,18%,20%,40%,60.1%,67%,80%,90.1%,92% {
 		color: #115263;
 		text-shadow: none;
 	}
 
-	18.1%,
-	20.1%,
-	50%,
-	60%,
-	67.1%,
-	80.1%,
-	90%,
-	92.1%,
-	100% {
+	18.1%,20.1%,50%,60%,67.1%,80.1%,90%,92.1%,100% {
 		color: #fff;
 		text-shadow: 0 0 10px #03bcf4,
 			0 0 20px #03bcf4,
@@ -262,7 +246,7 @@ header {
 	}
 }
 
-.page-title-description {
+.page-title-description p{
 	font-size: 18px;
 	margin-top: 50px;
 }

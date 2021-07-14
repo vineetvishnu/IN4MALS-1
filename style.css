@@ -255,7 +255,7 @@ header {
 }
 
 #card5 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/dance.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./image/dance_dept.jpeg);
 	transition-delay: 2s;
 	background-size: contain;
 

@@ -407,7 +407,7 @@ header {
 	text-decoration: none;
 	color: rgb(255 255 255 / 70%);
 	position: absolute;
-	bottom: 5px;
+	bottom: 15px;
 	right: 50px;
 	animation: bounceInLeft 2s ease infinite;
 }

@@ -474,7 +474,6 @@ footer {
 .footer-container {
 	display: flex;
 	justify-content: center;
-
 }
 
 .about-us {
@@ -496,6 +495,7 @@ footer {
 }
 
 .footer-container p {
+	margin: 20px;
 	font-family: var(--content-font);
 }
 

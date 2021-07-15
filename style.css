@@ -6,8 +6,8 @@
 /*Tourney*/
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap');
 
-/*Yomogi*/
-@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+/*Merienda*/
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
 :root {
 	--primary-bg: #101d2e;
@@ -16,7 +16,7 @@
 
 	--box-shadow: 0 20px 50px rgb(0 0 0/ 50%);
 
-	--heading-font: 'Tourney', cursive;
+	--heading-font: 'Merienda', cursive;
 
 	--content-font: 'Yomogi', cursive;
 }
@@ -137,7 +137,36 @@ header {
 }
 
 
+/*            Social icons          */
 
+.social-icons {
+	position: fixed;
+	top: 40%;
+	bottom: 50%;
+	right: 0;
+}
+
+.social-icons a {
+	text-decoration: none;
+}
+
+.fa-instagram {
+	display: block;
+	font-size: 30px;
+	margin: 20px 10px;
+}
+
+.fa-youtube {
+	display: block;
+	font-size: 30px;
+	margin: 20px 10px;
+}
+
+.social-icons a:hover {
+	cursor: pointer;
+	color: rgb(255 252 255 / 30%);
+
+}
 
 /*Image Slider*/
 
@@ -192,11 +221,14 @@ header {
 	background: rgb(255 255 255/ 5%);
 }
 
-@keyframes floatup{
-	0%, 100%{
+@keyframes floatup {
+
+	0%,
+	100% {
 		transform: translateY(0);
 	}
-	50%{
+
+	50% {
 		transform: translateY(-2px);
 	}
 
@@ -235,7 +267,7 @@ header {
 }
 
 #card2 {
-	background: linear-gradient(to bottom, rgb(212 212 212/ 30%), #000), url(./image/code.jpeg);
+	background: url(./image/coding.jpg);
 	transition-delay: .8s;
 	background-size: contain;
 
@@ -286,19 +318,19 @@ header {
 	align-items: center;
 	justify-content: center;
 	background: none;
-	border: 0;
+	border:0;
 }
 
 #cardL img {
 	width: 200px;
 	height: auto;
 	background: rgba(255, 255, 255, 0.65);
-	box-shadow: var(--box-shadow);
 	border-radius: 50%;
 	border: 5px solid rgba(0, 0, 255, 0.2);
 }
 
 #cardW {
+	text-align: center;
 	text-transform: uppercase;
 	color: rgb(255 255 255 /50%);
 	display: grid;
@@ -315,6 +347,7 @@ header {
 #cardW h3 {
 	font-family: var(--heading-font);
 	font-weight: bold;
+	font-size: 22px;
 }
 
 #cardW:hover {
@@ -438,6 +471,55 @@ footer {
 	bottom: 20px;
 }
 
+.footer-container {
+	display: flex;
+}
+
+.about-us {
+	width: 45vw;
+	margin: 20px;
+	background-color: var(--primary-bg);
+	padding: 15px;
+	border: 6px solid;
+	border-image: linear-gradient(to bottom, #000, #ffd700, #ffd700, #000)10 100%;
+	border-top-width: 0;
+	border-bottom-width: 0;
+	box-shadow: var(--box-shadow);
+animation: floatup 3s ease infinite;
+}
+
+.footer-container h2 {
+	font-family: var(--heading-font);
+	text-align: center;
+}
+
+.footer-container p {
+	font-family: var(--content-font);
+}
+
+.contact-us {
+	width: 45vw;
+	margin: 20px;
+	background-color: var(--primary-bg);
+	padding: 15px;
+	border: 6px solid;
+	border-image: linear-gradient(to bottom, #000, #ffd700, #ffd700, #000)10 100%;
+	border-top-width: 0;
+	border-bottom-width: 0;
+	box-shadow: var(--box-shadow);
+	animation: floatup 3s ease infinite;
+animation-delay: 1.2s;
+}
+
+.contact-us ul li {
+	list-style: none;
+	font-family: var(--content-font);
+}
+.contact-us ul li i{
+	position: relative;
+	top: 5px;
+	margin: 10px;
+}
 .copyright p {
 	color: #5589f2;
 	font-family: var(--content-font);
@@ -445,6 +527,7 @@ footer {
 	width: 400px;
 	text-align: center;
 	font-weight: bold;
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 10px 30px;

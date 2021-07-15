@@ -473,6 +473,8 @@ footer {
 
 .footer-container {
 	display: flex;
+	justify-content: center;
+
 }
 
 .about-us {
@@ -485,7 +487,7 @@ footer {
 	border-top-width: 0;
 	border-bottom-width: 0;
 	box-shadow: var(--box-shadow);
-animation: floatup 3s ease infinite;
+	animation: floatup 3s ease infinite;
 }
 
 .footer-container h2 {
@@ -508,7 +510,7 @@ animation: floatup 3s ease infinite;
 	border-bottom-width: 0;
 	box-shadow: var(--box-shadow);
 	animation: floatup 3s ease infinite;
-animation-delay: 1.2s;
+	animation-delay: 1.2s;
 }
 
 .contact-us ul li {

@@ -6,6 +6,10 @@
 /*Tourney*/
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100&display=swap');
 
+/*Josefin Slab*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+
+
 /*Merienda*/
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 
@@ -18,7 +22,7 @@
 
 	--heading-font: 'Merienda', cursive;
 
-	--content-font: 'Yomogi', cursive;
+	--content-font: 'Josefin Slab', serif;
 }
 
 * {
@@ -27,7 +31,7 @@
 }
 
 body {
-	background: var(--primary-bg);
+	background: radial-gradient(rgb(255 255 255/20%), var(--primary-bg)), linear-gradient(#fff, rgb(16 29 46/ 2%));
 	width: 100vw;
 	height: 100vh;
 	color: #fff;
@@ -54,25 +58,60 @@ body {
 	background: linear-gradient(#101d2e, #e8d57f, #e8d57f);
 }
 
-/*=========Main Content==========*/
+
+nav {
+	position: sticky;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 10%;
+	background-color: var(--primary-bg);
+	box-shadow: var(--box-shadow);
+	border-bottom: 3px solid #e8d57f;
+}
+
+li,
+a {
+	list-style: none;
+	color: #edf0f1;
+	font-size: 16px;
+}
+
+nav img {
+	position: absolute;
+	top: 5px;
+	left: 20px;
+	background: #fff;
+	width: 100.8px;
+	border-radius: 50%;
+	box-shadow: var(--box-shadow);
+	border: 3px solid red;
+}
+
+.nav-links li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	transition: 0.7s ease .1s;
+}
+
+.nav-links li a:hover {
+	color: #0088A9;
+}
 
 /*==========logo=========*/
 header {
-	padding: 30px 0 0 90px;
+	justify-content: center;
 	width: 100vw;
 	display: flex;
-
+	margin-top: 40px;
 }
-
-#informal-logo img {
-	width: 200px;
-	height: auto;
-	background: rgba(255, 255, 255, 0.65);
-	box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
-	border-radius: 50%;
-	border: 5px solid rgba(0, 0, 255, 0.2);
-}
-
 
 /*==========Page Title========*/
 
@@ -90,7 +129,7 @@ header {
 
 .page-title-society-name h1 {
 	position: relative;
-	font-size: 80px;
+	font-size: 6em;
 	letter-spacing: 7px;
 	color: #115263;
 	text-transform: capitalize;
@@ -141,31 +180,40 @@ header {
 
 .social-icons {
 	position: fixed;
-	top: 40%;
-	bottom: 50%;
+	top: 50%;
 	right: 0;
+	z-index: 2;
 }
 
 .social-icons a {
 	text-decoration: none;
+
 }
 
 .fa-instagram {
+	text-align: center;
 	display: block;
 	font-size: 30px;
-	margin: 20px 10px;
+
 }
 
 .fa-youtube {
 	display: block;
 	font-size: 30px;
-	margin: 20px 10px;
+	margin: 10px 0px;
+	text-align: center;
+
 }
 
-.social-icons a:hover {
-	cursor: pointer;
-	color: rgb(255 252 255 / 30%);
+.social-icons a .fab {
+	color: #fff;
+	padding: 5px 10px 5px 20px;
+	transition: 1s ease;
+}
 
+.social-icons a .fab:hover {
+	cursor: pointer;
+	transform: scale(1.15);
 }
 
 /*Image Slider*/
@@ -203,7 +251,7 @@ header {
 	box-shadow: var(--box-shadow);
 	background-color: rgb(16 29 46/ 1);
 	font-family: var(--heading-font);
-	border: 3px solid;
+	border: 6px solid;
 	border-top-width: 0;
 	border-bottom: 0;
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
@@ -215,9 +263,9 @@ header {
 	position: absolute;
 	width: 50%;
 	height: auto;
-	top: 2px;
-	left: 2px;
-	bottom: 2px;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
 	background: rgb(255 255 255/ 5%);
 }
 
@@ -237,7 +285,7 @@ header {
 
 /*Departments Cards*/
 .card-container {
-	margin: 160px 0;
+	margin: 180px 0;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -250,67 +298,68 @@ header {
 	width: 240px;
 	height: 250px;
 	color: #fff;
-	border: 3px solid;
+	border: 3.2px solid;
 	border-top-width: 0;
 	border-bottom: 0;
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
 	overflow: hidden;
-	transition: 1s ease;
+	transition: 1.6s ease;
 	background-size: contain;
 	background-position: center;
 }
 
 #card1 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/art_dept.jpg);
-	transition-delay: .4s;
+	transition-delay: .2s;
 	background-size: cover;
 }
 
 #card2 {
 	background: url(./image/coding.jpg);
-	transition-delay: .8s;
+	transition-delay: .4s;
 	background-size: contain;
 
 }
 
 #card3 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/2camera.jpg);
-	transition-delay: 1.2s;
+	transition-delay: .6s;
 	background-size: cover;
 }
 
 #card4 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/creative_writing.jpg);
-	transition-delay: 1.6s;
+	transition-delay: .8s;
 	background-size: cover;
 
 }
 
 #card5 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/dance_dept.jpeg);
-	transition-delay: 2s;
+	transition-delay: 1s;
 	background-size: contain;
 
 }
 
 #card6 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/1music.jpg);
-	transition-delay: 2.4s;
+	transition-delay: 1.2s;
 	background-size: contain;
 
 }
 
 #card7 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/fashion.jpg);
-	transition-delay: 2.8s;
+	transition-delay: 1.4s;
 	background-size: cover;
 
 }
 
 #card8 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/2game.jpg);
-	transition-delay: 3.2s;
+	transition-delay: 1.6s;
 	background-size: contain;
+	animation: floatleft 0.5s ease;
 }
 
 #cardL {
@@ -318,7 +367,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	background: none;
-	border:0;
+	border: 0;
 }
 
 #cardL img {
@@ -332,16 +381,51 @@ header {
 #cardW {
 	text-align: center;
 	text-transform: uppercase;
-	color: rgb(255 255 255 /50%);
+	color: rgb(0 0 0);
 	display: grid;
 	place-items: center;
-	background: linear-gradient(to top, #000000, #434343);
+	background-image: linear-gradient(rgb(255 255 255/ 75%), rgb(0 0 0/ 95%));
 	border: 3px solid;
 	border-top-width: 0;
 	border-bottom: 0;
 	box-shadow: 0 19px 38px rgba(100, 0, 0.30), 0 15px 12px rgba(2, 0, 0, 0.22);
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
-	transition-duration: 1.3s;
+	/*	transition: 1.6s ease;*/
+	/*	transition-duration: 1.3s;*/
+}
+
+#cardW::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	top: 50%;
+	left: 0;
+	width: 10px;
+	height: 100%;
+	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+	animation: shiny 2s ease infinite;
+}
+
+@-webkit-keyframes shiny {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0;
+	}
+
+	80% {
+		-webkit-transform: scale(0);
+		opacity: 0.5;
+	}
+
+	81% {
+		-webkit-transform: scale(4);
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: scale(50);
+		opacity: 0;
+	}
 }
 
 #cardW h3 {
@@ -361,7 +445,7 @@ header {
 }
 
 .cardW-btn {
-	color: rgb(255 255 255/ 50%);
+	color: rgb(0 255 255/ 50%);
 	position: absolute;
 	bottom: 15px;
 	right: 35px;
@@ -381,7 +465,7 @@ header {
 
 .card-content {
 	top: 100px;
-	position: absolute;
+	position: relative;
 	padding: 0 10px;
 	bottom: 0;
 	width: 100%;
@@ -404,9 +488,9 @@ header {
 .card-title::after {
 	content: ' ';
 	position: absolute;
-	top: 45px;
+	top: 35px;
 	left: 0;
-	width: 60%;
+	width: 130px;
 	height: 3px;
 	background-color: #FFD700;
 	transform: scaleX(0);
@@ -440,8 +524,8 @@ header {
 	text-decoration: none;
 	color: rgb(255 255 255 / 70%);
 	position: absolute;
-	bottom: 15px;
-	right: 50px;
+	bottom: 25px;
+	right: 30px;
 	animation: bounceInLeft 2s ease infinite;
 }
 
@@ -488,10 +572,20 @@ footer {
 	box-shadow: var(--box-shadow);
 	animation: floatup 3s ease infinite;
 }
-
+.about-us::before{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: auto;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	background: rgb(255 255 255/ 5%);
+}
 .footer-container h2 {
 	font-family: var(--heading-font);
 	text-align: center;
+	color: #5589f2;
 }
 
 .footer-container p {
@@ -512,21 +606,40 @@ footer {
 	animation: floatup 3s ease infinite;
 	animation-delay: 1.2s;
 }
-
+.contact-us:before{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: auto;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	background: rgb(255 255 255/ 5%);
+}
 .contact-us ul li {
 	list-style: none;
 	font-family: var(--content-font);
 }
-.contact-us ul li i{
+
+.contact-us ul li i {
 	position: relative;
 	top: 5px;
 	margin: 10px;
 }
+
+.contact-us ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.contact-us ul li a:hover {
+	color: #ebb134;
+}
+
 .copyright p {
 	color: #5589f2;
 	font-family: var(--content-font);
 	font-size: 20px;
-	width: 400px;
 	text-align: center;
 	font-weight: bold;
 	margin-top: 20px;
@@ -538,4 +651,15 @@ footer {
 	border: 3px solid #FFD700;
 	border-top-width: 0;
 	border-bottom-width: 0;
+}
+@keyframes floatleft {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }

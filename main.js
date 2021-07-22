@@ -6,30 +6,11 @@ function openMenu() {
 		document.body.style.backgroundImage = "linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 20%))";
 
 	}
-//Department cards animation
-	let card1 = document.querySelector('#card1');
-	let card2 = document.querySelector('#card2');
-	let card3 = document.querySelector('#card3');
-	let card4 = document.querySelector('#card4');
-	let card5 = document.querySelector('#card5');
-	let card6 = document.querySelector('#card6');
-	let card7 = document.querySelector('#card7');
-	let card8 = document.querySelector('#card8');
+let cards = [].slice.call(document.querySelectorAll('.card'));
+let cardW = document.querySelector('#cardW');
 
-	let cardL = document.querySelector('#cardL');
-	let cardW = document.querySelector('#cardW');
+cardW.addEventListener('click', function() {
+    cards.forEach(function(card){card.classList.add('transformed')});
+    cardW.classList.add('hidden');
 
-
-
-	cardW.addEventListener('click', function() {
-		card1.style.transform = "translate(350px,0px)";
-		card2.style.transform = "translate(-350px, 0px)";
-		card3.style.transform = "translate(350px , 300px)";
-		card4.style.transform = "translate(-350px , -300px)";
-		card5.style.transform = "translate(-350px , 300px)";
-		card6.style.transform = "translate(350px , -300px)";
-		card7.style.transform = "translate(0px , -300px)";
-		card8.style.transform = "translate(0px , 300px)";
-		cardW.style.opacity = "0";
-
-	});
+});

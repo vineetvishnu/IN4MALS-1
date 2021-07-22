@@ -107,9 +107,7 @@ nav img {
 
 /*==========logo=========*/
 header {
-	justify-content: center;
 	width: 100vw;
-	display: flex;
 	margin-top: 40px;
 }
 
@@ -117,7 +115,6 @@ header {
 
 #page-title {
 	text-align: center;
-	padding: 50px 60px;
 }
 
 #page-title p {
@@ -127,7 +124,7 @@ header {
 }
 
 
-.page-title-society-name h1 {
+.society-name h1 {
 	position: relative;
 	font-size: 6em;
 	letter-spacing: 7px;
@@ -136,8 +133,9 @@ header {
 	width: 100%;
 	text-align: center;
 	-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
-	line-height: 64px;
-	outline: none;
+	box-sizing: border-box;
+	line-height: 60px;
+	overflow-wrap: break-word;
 	animation: animate 5s linear infinite;
 	font-weight: 600;
 }
@@ -175,6 +173,10 @@ header {
 	}
 }
 
+.society-description {
+	overflow-wrap: break-word;
+
+}
 
 /*            Social icons          */
 
@@ -359,7 +361,6 @@ header {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/2game.jpg);
 	transition-delay: 1.6s;
 	background-size: contain;
-	animation: floatleft 0.5s ease;
 }
 
 #cardL {
@@ -398,32 +399,34 @@ header {
 	position: absolute;
 	content: '';
 	display: inline-block;
-	top: 50%;
+	top: -90px;
 	left: 0;
-	width: 10px;
+	width: 35px;
 	height: 100%;
 	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
-	animation: shiny 2s ease infinite;
+	animation: shiny 2.5s ease infinite;
 }
 
 @-webkit-keyframes shiny {
 	0% {
-		-webkit-transform: scale(0);
+		-webkit-transform: scale(0) rotate(45deg);
 		opacity: 0;
 	}
-
+	78%{
+		transform: scale(0) rotate(45deg);
+	}
 	80% {
-		-webkit-transform: scale(0);
+		-webkit-transform: scale(1) rotate(45deg);
 		opacity: 0.5;
 	}
 
 	81% {
-		-webkit-transform: scale(4);
+		-webkit-transform: scale(4) rotate(45deg);
 		opacity: 1;
 	}
 
 	100% {
-		-webkit-transform: scale(50);
+		-webkit-transform: scale(50) rotate(45deg);
 		opacity: 0;
 	}
 }
@@ -572,7 +575,8 @@ footer {
 	box-shadow: var(--box-shadow);
 	animation: floatup 3s ease infinite;
 }
-.about-us::before{
+
+.about-us::before {
 	content: '';
 	position: absolute;
 	width: 50%;
@@ -582,6 +586,7 @@ footer {
 	bottom: 0px;
 	background: rgb(255 255 255/ 5%);
 }
+
 .footer-container h2 {
 	font-family: var(--heading-font);
 	text-align: center;
@@ -606,16 +611,18 @@ footer {
 	animation: floatup 3s ease infinite;
 	animation-delay: 1.2s;
 }
-.contact-us:before{
+
+.contact-us:before {
 	content: '';
 	position: absolute;
 	width: 50%;
 	height: auto;
 	top: 0px;
-	left: 0px;
+	right: 0px;
 	bottom: 0px;
 	background: rgb(255 255 255/ 5%);
 }
+
 .contact-us ul li {
 	list-style: none;
 	font-family: var(--content-font);
@@ -652,6 +659,7 @@ footer {
 	border-top-width: 0;
 	border-bottom-width: 0;
 }
+
 @keyframes floatleft {
 	from {
 		opacity: 0;

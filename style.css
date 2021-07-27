@@ -30,6 +30,10 @@
 	margin: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: radial-gradient(rgb(255 255 255/20%), var(--primary-bg)), linear-gradient(#fff, rgb(16 29 46/ 2%));
 	width: 100vw;
@@ -45,7 +49,7 @@ body {
 
 
 ::-webkit-scrollbar-track {
-	background-color: transparent;
+	background-color: var(--primary-bg);
 }
 
 ::-webkit-scrollbar {
@@ -54,13 +58,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 20px;
+	border-radius: 30px;
+	border: 2px solid var(--primary-bg);
 	background: linear-gradient(#101d2e, #e8d57f, #e8d57f);
 }
 
 
 .bars {
-	position: absolute;
+	position: fixed;
 	width: 27px;
 	height: 27px;
 	top: 30px;
@@ -113,7 +118,7 @@ body {
 /* Navbar Links CSS */
 
 #nav {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -139,7 +144,7 @@ body {
 }
 
 #nav a:hover {
-	background: orange;
+	background: #ED213A;
 }
 
 ul {
@@ -251,15 +256,6 @@ header {
 	margin-top: 40px;
 }
 
-/*==========logo=========*/
-
-#page-title img {
-	position: relative;
-	top: 20px;
-	border-radius: 50%;
-	width: 120px;
-}
-
 /*==========Page Title========*/
 
 #page-title {
@@ -322,10 +318,7 @@ header {
 	}
 }
 
-.society-description {
-	overflow-wrap: break-word;
 
-}
 
 /*            Social icons          */
 
@@ -367,43 +360,6 @@ header {
 	transform: scale(1.15);
 }
 
-/*Image Slider*/
-#image-slider {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.slider {
-
-	width: 80%;
-	height: 500px;
-	border-radius: 20px;
-	border: 1px solid white;
-	box-shadow: 0 0 10px #fff;
-	background-image: url(image/kiit.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	animation: slider 20s ease-in infinite;
-}
-
-@keyframes slider {
-	0% {
-		background-image: url(image/kiit.jpg);
-	}
-
-	35% {
-		background-image: url(image/picture10.jpg);
-	}
-
-	70% {
-		background-image: url(image/picture2.jpg);
-	}
-
-	90% {
-		background-image: url(image/picture3.jpg);
-	}
-}
 
 /*=============Our Departments Section===========*/
 #departments {
@@ -423,7 +379,8 @@ header {
 }
 
 .dept h1 {
-	position: absolute;
+	position: relative;
+	left: 0;
 	font-size: 30px;
 	color: #5589f2;
 	font-weight: bolder;
@@ -435,35 +392,8 @@ header {
 	border-top-width: 0;
 	border-bottom: 0;
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
-	animation: floatup 3s ease infinite;
-}
-
-.dept h1:before {
-	content: '';
-	position: absolute;
-	width: 50%;
-	height: auto;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	background: rgb(255 255 255/ 5%);
-}
-
-@keyframes floatup {
-
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-
-	50% {
-		transform: translateY(-2px);
-	}
 
 }
-
 
 /*Departments Cards*/
 .card-container {
@@ -736,6 +666,7 @@ header {
 .feedback-heading {
 	margin: 30px 0;
 	width: 100vw;
+	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -752,7 +683,6 @@ header {
 	border-top-width: 0;
 	border-bottom: 0;
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
-	animation: floatup 3s ease infinite;
 }
 
 .feedback-container {
@@ -777,6 +707,14 @@ header {
 	font-size: 23px;
 	position: relative;
 	margin-right: 5px;
+	transition: color 1s ease;
+	border: 1.8px solid #fff;
+	border-radius: 50%;
+	padding: 10px 8px;
+}
+
+.progress-container span:hover .progress-container i {
+	color: dodgerblue;
 }
 
 .progress-container span {
@@ -787,7 +725,7 @@ header {
 	border-radius: 40px;
 	padding: 5px;
 	margin-bottom: 10px;
-
+	color: #efefef;
 }
 
 .progressbar-wrapper {
@@ -851,18 +789,6 @@ footer {
 	border-top-width: 0;
 	border-bottom-width: 0;
 	box-shadow: var(--box-shadow);
-	animation: floatup 3s ease infinite;
-}
-
-.about-us::before {
-	content: '';
-	position: absolute;
-	width: 50%;
-	height: auto;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	background: rgb(255 255 255/ 5%);
 }
 
 .footer-container h2 {
@@ -886,19 +812,6 @@ footer {
 	border-top-width: 0;
 	border-bottom-width: 0;
 	box-shadow: var(--box-shadow);
-	animation: floatup 3s ease infinite;
-	animation-delay: 1.2s;
-}
-
-.contact-us:before {
-	content: '';
-	position: absolute;
-	width: 50%;
-	height: auto;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	background: rgb(255 255 255/ 5%);
 }
 
 .contact-us ul li {
@@ -936,16 +849,4 @@ footer {
 	border: 3px solid #FFD700;
 	border-top-width: 0;
 	border-bottom-width: 0;
-}
-
-@keyframes floatleft {
-	from {
-		opacity: 0;
-		transform: translateX(-20px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
 }

@@ -103,4 +103,7 @@
 	.feedback-container{
 		grid-template-columns: repeat(1, 1fr);
 	}
+	.progressbar-wrapper{
+		width: 80%;
+	}
 }

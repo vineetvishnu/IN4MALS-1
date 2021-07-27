@@ -1,16 +1,25 @@
-function openMenu() {
-		document.querySelector('#toggle-btn').classList.toggle('active');
+	var bars = document.getElementById("nav-action");
+	var nav = document.getElementById("nav");
 
-		document.querySelector('#sidebar').classList.toggle('active');
-		document.querySelector('#social-links').classList.toggle('new');
-		document.body.style.backgroundImage = "linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 20%))";
 
+	//setting up the listener
+	bars.addEventListener("click", barClicked, false);
+
+
+	//setting up the clicked Effect
+	function barClicked() {
+		bars.classList.toggle('active');
+		nav.classList.toggle('visible');
 	}
-let cards = [].slice.call(document.querySelectorAll('.card'));
-let cardW = document.querySelector('#cardW');
 
-cardW.addEventListener('click', function() {
-    cards.forEach(function(card){card.classList.add('transformed')});
-    cardW.classList.add('hidden');
 
-});
+  let cards = [].slice.call(document.querySelectorAll('.card'));
+  let cardW = document.querySelector('#cardW');
+
+  cardW.addEventListener('click', function () {
+  	cards.forEach(function (card) {
+  		card.classList.add('transformed')
+  	});
+  	cardW.classList.add('hidden');
+
+  });

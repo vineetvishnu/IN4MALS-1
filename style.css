@@ -42,7 +42,7 @@ body {
 	background-image: url(image/bodybg.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
+/*	background-size: cover;*/
 	overflow-x: hidden;
 }
 
@@ -77,39 +77,40 @@ body {
 
 .bar {
 	width: 100%;
-	height: 4px;
+	height: 3.5px;
 	background-color: #fff;
 	position: absolute;
 }
 
-#nav-action span::before,
-#nav-action span::after {
+#nav-action #bar1,
+#nav-action #bar3 {
 	content: "";
 	display: block;
 	background-color: #fff;
 	width: 100%;
-	height: 4px;
+	height: 3.4px;
 	position: absolute;
 }
 
-#nav-action .bar::before {
-	transform: translateY(-9px);
+#nav-action #bar1 {
+	transform: translateY(-10px);
 }
 
-#nav-action .bar::after {
-	transform: translateY(9px);
+#nav-action #bar3 {
+	transform: translateY(10px);
 }
 
-#nav-action .bars.active #nav-action > .bar {
-	background-color: transparent;
+.bars.active #bar2 {
+	animation: disappear 1s;
+	animation-fill-mode: forwards;
 }
 
-.bars.active > #nav-action span::before {
+.bars.active #bar1 {
 	animation: top-bar 1s;
 	animation-fill-mode: forwards;
 }
 
-.bars.active > #nav-action span::after {
+.bars.active #bar3 {
 	animation: bottom-bar 1s;
 	animation-fill-mode: forwards;
 }
@@ -119,10 +120,10 @@ body {
 
 #nav {
 	position: fixed;
-	top: 0;
+	top: 0px;
 	bottom: 0;
 	left: 0;
-	right: 0;
+	right: 0px;
 	transition: all 1s;
 	z-index: -1;
 	overflow: hidden;
@@ -132,7 +133,8 @@ body {
 #nav a {
 	color: #fff;
 	text-decoration: none;
-	line-height: 70vw;
+	font-size: 22px;
+	font-family: var(--heading-font);
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -208,24 +210,24 @@ nav.visible li:last-child {
 	box-shadow: 0 0px 80px rgba(232, 213, 127, 0.5);
 }
 
-nav.visible li:first-child a {
-	line-height: 265vw !important;
+nav.visible li:nth-child(1) a {
+	line-height: 275vw !important;
 	text-indent: 15vw !important;
 
 }
 
 nav.visible li:nth-child(2) a {
-	line-height: 200vw !important;
+	line-height: 210vw !important;
 	text-indent: 17vw !important;
 }
 
 nav.visible li:nth-child(3) a {
-	line-height: 137vw !important;
+	line-height: 147vw !important;
 	text-indent: 17vw !important;
 
 }
 
-nav.visible li:last-child a {
+nav.visible li:nth-child(4) a {
 	line-height: 70vw !important;
 	text-indent: 12vw !important;
 }
@@ -250,6 +252,14 @@ nav.visible li:last-child a {
 	}
 }
 
+@keyframes disappear{
+	50%{
+		transform: scale(0);
+	}
+	100%{
+		background-color: transparent;
+	}
+}
 
 header {
 	width: 100vw;
@@ -275,7 +285,7 @@ header {
 	letter-spacing: 7px;
 	color: #115263;
 	text-transform: capitalize;
-	width: 100%;
+	width: 100vw;
 	text-align: center;
 	-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
 	box-sizing: border-box;
@@ -325,7 +335,7 @@ header {
 .social-icons {
 	position: fixed;
 	top: 50%;
-	right: 0;
+	right: 10px;
 	z-index: 2;
 }
 
@@ -672,7 +682,7 @@ header {
 	justify-content: center;
 }
 
-#feedback h1 {
+.feedback-heading h1 {
 	font-family: var(--heading-font);
 	color: #5589f2;
 	font-size: 30px;

@@ -37,7 +37,7 @@ html {
 body {
 	background: var(--primary-bg);
 	width: 100vw;
-	height: 100vh;
+	height: 300vh;
 	color: #fff;
 	background-image: url(image/bodybg.jpg);
 	background-attachment: fixed;

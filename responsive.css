@@ -41,9 +41,11 @@
 	#cardW {
 		display: none;
 	}
-#informal-logo{
+
+	#informal-logo {
 		display: none;
 	}
+
 	.card {
 		position: static;
 		margin-right: auto;
@@ -66,17 +68,16 @@
 }
 
 @media(max-width: 644px) {
-/*
-	header {
-		padding: 30px 0 0 10px;
+
+	body {
+		/*		background-image: url(image/bodybg-mobile.jpg);*/
+		overflow-x: hidden;
 	}
-*/
-	body{
-		background-image: url(image/bodybg-mobile.jpg);
-	}
-	.society-name h1{
+
+	.society-name h1 {
 		font-size: 50px;
 	}
+
 	.card-container {
 		grid-template-columns: repeat(1, 1fr);
 		margin-left: auto;
@@ -100,10 +101,50 @@
 	.contact-us {
 		width: 95%;
 	}
-	.feedback-container{
+
+	.feedback-container {
 		grid-template-columns: repeat(1, 1fr);
 	}
-	.progressbar-wrapper{
-		width: 80%;
+
+	.progressbar-wrapper {
+		width: 85%;
 	}
+
+	nav.visible li:nth-child(1) {
+		width: 230vw;
+		height: 230vw;
+	}
+
+	nav.visible li:nth-child(2) {
+		width: 170vw;
+		height: 170vw;
+	}
+
+	nav.visible li:nth-child(3) {
+		width: 110vw;
+		height: 110vw;
+	}
+
+	nav.visible li:nth-child(4) {
+		width: 50vw;
+		height: 50vw;
+	}
+
+	nav.visible li:nth-child(1) a {
+		line-height: 370vw !important;
+		text-indent: 35vw !important;
+
+	}
+
+	nav.visible li:nth-child(2) a {
+		line-height: 265vw !important;
+		text-indent: 28vw !important;
+	}
+
+	nav.visible li:nth-child(3) a {
+		line-height: 160vw !important;
+		text-indent: 18vw !important;
+
+	}
+
 }

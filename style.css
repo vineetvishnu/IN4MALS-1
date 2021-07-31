@@ -35,8 +35,7 @@ html {
 }
 
 body {
-background: var(--primary-bg);
-	background: radial-gradient(rgb(255 255 255/20%), var(--primary-bg)), linear-gradient(#fff, rgb(16 29 46/ 2%));
+	background: var(--primary-bg);
 	width: 100vw;
 	height: 100vh;
 	color: #fff;

@@ -70,7 +70,6 @@
 @media(max-width: 644px) {
 
 	body {
-		/*		background-image: url(image/bodybg-mobile.jpg);*/
 		overflow-x: hidden;
 	}
 
@@ -105,11 +104,7 @@
 	.feedback-container {
 		grid-template-columns: repeat(1, 1fr);
 	}
-
-	.progressbar-wrapper {
-		width: 85%;
-	}
-
+	
 	nav.visible li:nth-child(1) {
 		width: 230vw;
 		height: 230vw;

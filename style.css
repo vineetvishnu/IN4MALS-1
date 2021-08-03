@@ -47,32 +47,49 @@ body {
 	overflow-x: hidden;
 }
 
-
+a{text-decoration: none;}
 
 ::-webkit-scrollbar-track {
 	background-color: var(--primary-bg);
 }
 
 ::-webkit-scrollbar {
-	width: 8px;
-
+	width: 2px;
 }
-
+::-webkit-scrollbar:hover{
+	width: 8px;
+}
 ::-webkit-scrollbar-thumb {
 	border-radius: 30px;
 	background: linear-gradient(#101d2e, #e8d57f, #e8d57f);
 }
 
+/*===============Society Logo===============*/
+#logo_img{
+	border-radius: 50%;
+	width: 100px;
+	position: relative;
+	left: 30px;
+	top: 10px;
+}
 
+/*====================Navigation Bar===============*/
+
+/*Navbar icon*/
 .bars {
 	position: fixed;
 	width: 30px;
 	height: 30px;
-	top: 30px;
+	top: 40px;
 	right: 10px;
 	cursor: pointer;
 	z-index: 101;
 	padding-top: 9px;
+	transition: .5s ease;
+}
+
+.bars.active{
+	top: 20px;
 }
 
 .bar {
@@ -253,6 +270,7 @@ nav.visible li:nth-child(4) a {
 	}
 }
 
+/*===============Main Content===============*/
 header {
 	width: 100vw;
 	margin-top: 40px;
@@ -416,64 +434,116 @@ header {
 	border-bottom: 0;
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
 	overflow: hidden;
-	transition: 1.6s ease;
+	transition: .9s ease;
 	background-size: contain;
 	background-position: center;
 }
 
+/*       Card Content          */
+
+.card-content {
+	top: 97px;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(110px);
+	transform-origin: bottom;
+	font-family: var(--content-font);
+	transition: transform .5s ease;
+}
+
+.card:hover .card-content{
+	transform: translateY(0);
+}
+
+
+/*         Card title        */
+
+.card-title .h1 {
+	font-size: 23px;
+	color: rgb(255 255 255/ 90%);
+	padding: 10px 10px;
+	font-family: var(--heading-font);
+	text-shadow: 0px 0px 4px #00f;
+	cursor: pointer;
+}
+
+/*          Card Description          */
+.card-description {
+	padding: 10px;
+	transform: translateY(60px);
+	transition: .5s ease;
+}
+
+.card:hover .card-description{
+	transform: translateY(0);
+	transition-delay: .2s;
+}
+
+
+/*            ART CARD        */
 #card1 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/art_dept.jpg);
 	transition-delay: .2s;
 	background-size: cover;
 }
 
+/*            CODING CARD        */
 #card2 {
-	background: url(./image/coding.jpg);
-	transition-delay: .4s;
+	background: linear-gradient(to bottom, rgb(0 0 0/1%), rgb(0 0 0 /50%)), url(./image/coding.jpg);
+	transition-delay: .3s;
 	background-size: contain;
 
 }
 
+/*            PHOTOGRAPHY CARD        */
 #card3 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/2camera.jpg);
-	transition-delay: .6s;
+	transition-delay: .4s;
 	background-size: cover;
 }
 
+/*            CREATIVE WRITING CARD        */
 #card4 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/creative_writing.jpg);
+	transition-delay: .5s;
+	background-size: cover;
+
+}
+
+/*            DANCE CARD        */
+#card5 {
+	background: linear-gradient(to bottom, #4443, #000), url(./image/dance_dept.jpeg);
+	transition-delay: .6s;
+	background-size: contain;
+
+}
+
+/*            MUSIC CARD        */
+#card6 {
+	background: linear-gradient(to bottom, #4443, #000), url(./image/1music.jpg);
+	transition-delay: .7s;
+	background-size: contain;
+
+}
+
+/*            FASHION CARD        */
+#card7 {
+	background:  url(./image/fashion_aman.jpeg);
 	transition-delay: .8s;
 	background-size: cover;
 
 }
 
-#card5 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/dance_dept.jpeg);
-	transition-delay: 1s;
-	background-size: contain;
-
-}
-
-#card6 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/1music.jpg);
-	transition-delay: 1.2s;
-	background-size: contain;
-
-}
-
-#card7 {
-	background:  url(./image/fashion_aman.jpeg);
-	transition-delay: 1.4s;
-	background-size: cover;
-
-}
-
+/*            GAMING CARD        */
 #card8 {
 	background: linear-gradient(to bottom, #4443, #000), url(./image/2game.jpg);
-	transition-delay: 1.6s;
+	transition-delay: .9s;
 	background-size: contain;
 }
 
+/*            SOCIETY LOGO CARD        */
 #cardL {
 	display: flex;
 	align-items: center;
@@ -487,9 +557,10 @@ header {
 	height: auto;
 	background: rgba(255, 255, 255, 0.65);
 	border-radius: 50%;
-	border: 5px solid rgba(0, 0, 255, 0.2);
+
 }
 
+/*            WRAPPER CARD        */
 #cardW {
 	text-align: center;
 	text-transform: uppercase;
@@ -503,7 +574,6 @@ header {
 	box-shadow: 0 19px 38px rgba(100, 0, 0.30), 0 15px 12px rgba(2, 0, 0, 0.22);
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
 }
-
 
 #cardW::before {
 	position: absolute;
@@ -577,75 +647,7 @@ header {
 	animation-play-state: paused;
 }
 
-
-.card-content {
-	top: 96px;
-	position: relative;
-	bottom: 0;
-	width: 100%;
-	height: 160px;
-	background: linear-gradient(to bottom, rgb(111 0 0/ 30%), rgb(111 0 0/ 50%), rgb(32 1 34/ 70%));
-	transform: translateY(113px);
-	transform-origin: bottom;
-	font-family: var(--content-font);
-	transition: transform 1s ease;
-}
-
-.card:hover .card-content {
-	transform: translateY(0);
-}
-.card-title h1 {
-	font-size: 23px;
-	width: max-content;
-	color: rgb(255 255 255/ 90%);
-	padding: 3px 10px;
-	font-family: var(--heading-font);
-	text-shadow: 0px 0px 8px #00f;
-}
-
-.card-title h1::after {
-	content: ' ';
-	position: absolute;
-	top: 40px;
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background-color: #FFD700;
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 1s ease;
-}
-
-
-.card:hover .card-title h1::after {
-	transform: scaleX(1);
-}
-
-.card-description {
-	margin-top: 10px;
-	padding: 5px;
-}
-
-.card-content a {
-	text-decoration: none;
-	color: #cccccc;
-	padding-left: 100%;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	font-size: 1.8rem;
-	transition: all .5s ease;
-	text-shadow: 0px 0px 18px #000;
-
-}
-
-.card-content a:hover {
-	color: rgb(125 125 255/ 1);
-	text-shadow: 0px 0px 8px #00f;
-
-}
-
-/*Feedback Section*/
+/*================================Feedback Section============================*/
 .feedback-heading {
 	margin: 30px 0;
 	width: 100vw;
@@ -696,9 +698,7 @@ header {
 	padding: 10px 8px;
 }
 
-.progress-container span:hover .progress-container i {
-	color: dodgerblue;
-}
+
 
 .progress-container span {
 	font-family: var(--content-font);
@@ -711,13 +711,18 @@ header {
 	color: #efefef;
 }
 
+
+.progress-container span:hover .progress-container i {
+	color: dodgerblue;
+}
+
+
 .progressbar-wrapper {
 	width: 100%;
 	height: 20px;
 	background: rgb(255 255 255/ 70%);
 	border-radius: 20px;
 	margin: 0 10px 0 0;
-/*	overflow-x: */
 }
 
 .progressbar {
@@ -751,7 +756,7 @@ header {
 }
 
 
-/*footer*/
+/*===========================================Footer Section=========================================*/
 footer {
 	position: relative;
 	bottom: 20px;

@@ -92,7 +92,9 @@
 		flex-wrap: wrap;
 		width: 100vw;
 	}
-
+	.progressbar-wrapper {
+		width: 95%;
+	}
 	.about-us {
 		width: 95%;
 	}

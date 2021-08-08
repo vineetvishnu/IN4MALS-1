@@ -90,6 +90,7 @@ a {
 	z-index: 101;
 	padding-top: 9px;
 	transition: .5s ease;
+	outline: none;
 }
 
 .bars.active {
@@ -102,6 +103,7 @@ a {
 	border-radius: 20px;
 	background-color: #fff;
 	position: absolute;
+	outline: none;
 }
 
 #nav-action #bar1 {

@@ -47,7 +47,9 @@ body {
 	overflow-x: hidden;
 }
 
-a{text-decoration: none;}
+a {
+	text-decoration: none;
+}
 
 ::-webkit-scrollbar-track {
 	background-color: var(--primary-bg);
@@ -56,16 +58,18 @@ a{text-decoration: none;}
 ::-webkit-scrollbar {
 	width: 2px;
 }
-::-webkit-scrollbar:hover{
+
+::-webkit-scrollbar:hover {
 	width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
 	border-radius: 30px;
 	background: linear-gradient(#101d2e, #e8d57f, #e8d57f);
 }
 
 /*===============Society Logo===============*/
-#logo_img{
+#logo_img {
 	border-radius: 50%;
 	width: 100px;
 	position: relative;
@@ -88,7 +92,7 @@ a{text-decoration: none;}
 	transition: .5s ease;
 }
 
-.bars.active{
+.bars.active {
 	top: 20px;
 }
 
@@ -261,11 +265,12 @@ nav.visible li:nth-child(4) a {
 	}
 }
 
-@keyframes disappear{
-	50%{
+@keyframes disappear {
+	50% {
 		transform: scale(0);
 	}
-	100%{
+
+	100% {
 		background-color: transparent;
 	}
 }
@@ -344,7 +349,7 @@ header {
 
 .social-icons {
 	position: fixed;
-	top: 50%;
+	top: 45%;
 	right: 10px;
 	z-index: 2;
 }
@@ -369,15 +374,21 @@ header {
 
 }
 
+.fa-discord {
+	display: block;
+	font-size: 30px;
+	margin: 10px 0px;
+	text-align: center;
+}
+
 .social-icons a .fab {
 	color: #fff;
 	padding: 5px 10px 5px 20px;
-	transition: 1s ease;
 }
 
 .social-icons a .fab:hover {
 	cursor: pointer;
-	transform: scale(1.15);
+	transform: scale(1.08);
 }
 
 
@@ -403,7 +414,7 @@ header {
 	font-size: 30px;
 	color: #5589f2;
 	text-align: center;
-	padding: 20px ;
+	padding: 20px;
 	box-shadow: var(--box-shadow);
 	background-color: rgb(16 29 46/ 1);
 	font-family: var(--heading-font);
@@ -453,7 +464,7 @@ header {
 	transition: transform .5s ease;
 }
 
-.card:hover .card-content{
+.card:hover .card-content {
 	transform: translateY(0);
 }
 
@@ -461,12 +472,17 @@ header {
 /*         Card title        */
 
 .card-title .h1 {
+	width: 100%;
 	font-size: 23px;
 	color: rgb(255 255 255/ 90%);
 	padding: 10px 10px;
 	font-family: var(--heading-font);
 	text-shadow: 0px 0px 4px #00f;
 	cursor: pointer;
+}
+
+.card-title .h1:hover {
+	color: red;
 }
 
 /*          Card Description          */
@@ -476,7 +492,7 @@ header {
 	transition: .5s ease;
 }
 
-.card:hover .card-description{
+.card:hover .card-description {
 	transform: translateY(0);
 	transition-delay: .2s;
 }
@@ -484,14 +500,14 @@ header {
 
 /*            ART CARD        */
 #card1 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/art_dept.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/image/art_dept.jpg);
 	transition-delay: .2s;
 	background-size: cover;
 }
 
 /*            CODING CARD        */
 #card2 {
-	background: linear-gradient(to bottom, rgb(0 0 0/1%), rgb(0 0 0 /50%)), url(./image/coding.jpg);
+	background: linear-gradient(to bottom, rgb(0 0 0/1%), rgb(0 0 0 /50%)), url(./src/image/coding.jpg);
 	transition-delay: .3s;
 	background-size: contain;
 
@@ -499,14 +515,14 @@ header {
 
 /*            PHOTOGRAPHY CARD        */
 #card3 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/2camera.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/image/2camera.jpg);
 	transition-delay: .4s;
 	background-size: cover;
 }
 
 /*            CREATIVE WRITING CARD        */
 #card4 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/creative_writing.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/image/creative_writing.jpg);
 	transition-delay: .5s;
 	background-size: cover;
 
@@ -514,7 +530,7 @@ header {
 
 /*            DANCE CARD        */
 #card5 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/dance_dept.jpeg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/image/dance_dept.jpeg);
 	transition-delay: .6s;
 	background-size: contain;
 
@@ -522,7 +538,7 @@ header {
 
 /*            MUSIC CARD        */
 #card6 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/1music.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/image/1music.jpg);
 	transition-delay: .7s;
 	background-size: contain;
 
@@ -530,7 +546,7 @@ header {
 
 /*            FASHION CARD        */
 #card7 {
-	background:  url(./image/fashion_aman.jpeg);
+	background: url(./src/image/fashion_aman.jpeg);
 	transition-delay: .8s;
 	background-size: cover;
 
@@ -538,7 +554,7 @@ header {
 
 /*            GAMING CARD        */
 #card8 {
-	background: linear-gradient(to bottom, #4443, #000), url(./image/2game.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/image/2game.jpg);
 	transition-delay: .9s;
 	background-size: contain;
 }
@@ -629,22 +645,15 @@ header {
 	color: #fff;
 }
 
-.cardW-btn {
-	color: rgb(0 255 255/ 50%);
+#cardW i {
+	color: rgb(255 255 255/ 50%);
 	position: absolute;
 	bottom: 15px;
-	right: 35px;
+	right: 20px;
 	border: 0;
 	background: none;
-	font-size: 20px;
-	transition: color 1s;
-	animation: bounceInLeft 2s ease infinite;
-}
-
-.cardW-btn:hover {
-	transform: translateY(-8px);
+	font-size: 30px;
 	cursor: pointer;
-	animation-play-state: paused;
 }
 
 /*================================Feedback Section============================*/
@@ -675,6 +684,7 @@ header {
 	grid-template-columns: repeat(2, 1fr);
 	margin: 0 20px;
 	background: var(--primary-bg);
+	backdrop-filter: blur(13px);
 	border: 6px solid;
 	border-top-width: 0;
 	border-bottom: 0;
@@ -696,6 +706,7 @@ header {
 	border: 1.8px solid #fff;
 	border-radius: 50%;
 	padding: 10px 8px;
+	text-shadow: 0 0 8px #f00;
 }
 
 
@@ -709,6 +720,8 @@ header {
 	padding: 5px;
 	margin-bottom: 10px;
 	color: #efefef;
+	text-shadow: 0 0 8px #00f;
+
 }
 
 

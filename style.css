@@ -39,7 +39,7 @@ body {
 	width: 100vw;
 	height: 200vh;
 	color: #fff;
-	background-image: url(./src/image/bodybg.jpg);
+	background-image: url(./src/components/image/bodybg.jpg);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -500,14 +500,14 @@ header {
 
 /*            ART CARD        */
 #card1 {
-	background: linear-gradient(to bottom, #4443, #000), url(./src/image/art_dept.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/components/image/art_dept.jpg);
 	transition-delay: .2s;
 	background-size: cover;
 }
 
 /*            CODING CARD        */
 #card2 {
-	background: linear-gradient(to bottom, rgb(0 0 0/1%), rgb(0 0 0 /50%)), url(./src/image/coding.jpg);
+	background: linear-gradient(to bottom, rgb(0 0 0/1%), rgb(0 0 0 /50%)), url(./src/components/image/coding.jpg);
 	transition-delay: .3s;
 	background-size: contain;
 
@@ -515,14 +515,14 @@ header {
 
 /*            PHOTOGRAPHY CARD        */
 #card3 {
-	background: linear-gradient(to bottom, #4443, #000), url(./src/image/2camera.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/components/image/2camera.jpg);
 	transition-delay: .4s;
 	background-size: cover;
 }
 
 /*            CREATIVE WRITING CARD        */
 #card4 {
-	background: linear-gradient(to bottom, #4443, #000), url(./src/image/creative_writing.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/components/image/creative_writing.jpg);
 	transition-delay: .5s;
 	background-size: cover;
 
@@ -530,7 +530,7 @@ header {
 
 /*            DANCE CARD        */
 #card5 {
-	background: linear-gradient(to bottom, #4443, #000), url(./src/image/dance_dept.jpeg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/components/image/dance_dept.jpeg);
 	transition-delay: .6s;
 	background-size: contain;
 
@@ -538,7 +538,7 @@ header {
 
 /*            MUSIC CARD        */
 #card6 {
-	background: linear-gradient(to bottom, #4443, #000), url(./src/image/1music.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/components/image/1music.jpg);
 	transition-delay: .7s;
 	background-size: contain;
 
@@ -546,7 +546,7 @@ header {
 
 /*            FASHION CARD        */
 #card7 {
-	background: url(./src/image/fashion_aman.jpeg);
+	background: url(./src/components/image/fashion_aman.jpeg);
 	transition-delay: .8s;
 	background-size: cover;
 
@@ -554,7 +554,7 @@ header {
 
 /*            GAMING CARD        */
 #card8 {
-	background: linear-gradient(to bottom, #4443, #000), url(./src/image/2game.jpg);
+	background: linear-gradient(to bottom, #4443, #000), url(./src/components/image/2game.jpg);
 	transition-delay: .9s;
 	background-size: contain;
 }

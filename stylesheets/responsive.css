@@ -1,1 +1,149 @@
+@media (min-width: 947px) {
 
+	#cardW.hidden {
+		opacity: 0;
+	}
+
+	#card1.transformed {
+		transform: translate(350px, 0px)
+	}
+
+	#card2.transformed {
+		transform: translate(-350px, 0px)
+	}
+
+	#card3.transformed {
+		transform: translate(350px, 300px)
+	}
+
+	#card4.transformed {
+		transform: translate(-350px, -300px)
+	}
+
+	#card5.transformed {
+		transform: translate(-350px, 300px)
+	}
+
+	#card6.transformed {
+		transform: translate(350px, -300px)
+	}
+
+	#card7.transformed {
+		transform: translate(0px, -300px)
+	}
+
+	#card8.transformed {
+		transform: translate(0px, 300px)
+	}
+}
+
+@media (max-width: 946px) {
+	#cardW {
+		display: none;
+	}
+
+	#informal-logo {
+		display: none;
+	}
+
+	.card {
+		position: static;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.card-container {
+		height: auto;
+		margin: 102px 0px;
+		display: grid;
+		align-items: center;
+		grid-gap: 30px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#cardL {
+		display: none;
+	}
+
+}
+
+@media(max-width: 644px) {
+
+	body {
+		overflow-x: hidden;
+	}
+	#logo_img{
+		left: 10px;
+	}
+	.society-name h1 {
+		font-size: 50px;
+	}
+
+	.card-container {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.card {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.footer-container {
+		flex-wrap: wrap;
+		width: 100vw;
+	}
+
+	.about-us {
+		width: 95%;
+	}
+
+	.contact-us {
+		width: 95%;
+	}
+
+	.feedback-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.progressbar-wrapper {
+		width: 100%;
+	}
+
+	nav.visible li:nth-child(1) {
+		width: 230vw;
+		height: 230vw;
+	}
+
+	nav.visible li:nth-child(2) {
+		width: 170vw;
+		height: 170vw;
+	}
+
+	nav.visible li:nth-child(3) {
+		width: 110vw;
+		height: 110vw;
+	}
+
+	nav.visible li:nth-child(4) {
+		width: 50vw;
+		height: 50vw;
+	}
+
+	nav.visible li:nth-child(1) a {
+		line-height: 370vw !important;
+		text-indent: 35vw !important;
+
+	}
+
+	nav.visible li:nth-child(2) a {
+		line-height: 265vw !important;
+		text-indent: 28vw !important;
+	}
+
+	nav.visible li:nth-child(3) a {
+		line-height: 160vw !important;
+		text-indent: 18vw !important;
+	}
+}

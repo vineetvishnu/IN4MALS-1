@@ -1,55 +1,119 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-	
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>IN4MALS PHOTOGRAPHY</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 </head>
 
 <body>
-	<nav>
-		<img src="src/components/image/IN4MALS_logo1.jpeg">
-		<p>IN4MALS PHOTOGRAPHY</p>
-		<div class="toggle-bar"><i class="fas fa-bars"></i></div>
-		<ul class="nav-links">
-			<li><a href="#">About us</a></li>
-			<li><a href="#">Events</a></li>
-			<li><a href="#">Contact Us</a></li>
+	<!--	Top Navigation Bar-->
+
+	<div class="bars" id="nav-action">
+		<span class="bar" id="bar1"> </span>
+		<span class="bar" id="bar2"> </span>
+		<span class="bar" id="bar3"> </span>
+	</div>
+
+	<nav id="nav">
+		<ul>
+			<li class="shape-circle circle-one"><a href="#contact-us">Contact</a></li>
+			<li class="shape-circle circle-two"><a href="#">Events</a></li>
+			<li class="shape-circle circle-three"><a href="#about-us">Our Team</a></li>
+			<li class="shape-circle circle-five"></li>
 		</ul>
 	</nav>
-	<section id="grid">
-		<div class="wrapper">
-			<div class="gallery">
-				<div class="image"><span><img src="src/components/image/picture1.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture2.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture3.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture4.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture5.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture6.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture7.jpeg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture8.jpeg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture9.jpeg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture10.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture11.jpg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-				<div class="image"><span><img src="src/components/image/picture12.jpeg" alt=""></span><span><p><i class="fas fa-camera"></i> Swastika Ray</p></span></div>
-			</div>
-		</div>
-		<div class="preview-box">
-			<div class="details">
-				<span class="icon fas fa-times"></span>
-			</div>
-			<div class="image-box">
-				<div class="slide prev"><i class="fas fa-chevron-left"></i></div>
-				<div class="slide next"><i class="fas fa-chevron-right"></i></div>
-				<img class="preview-img" src="" alt="">
-			</div>
-		</div>
-		<div class="shadow"></div>
-	</section>
-	<script src="src/main.js"></script>
 
-</body></html>
+	<!--	Photography Section-->
+	<section>
+		<div class="photography">
+			<img src="image/in4mals_camera.jpg" />
+			<div class="photography_text">
+				<h2>IN4MALS PHOTOGRAPHY</h2>
+				<blockquote>To me, photography is an art of observation. It's about finding something interesting in an ordinary place... I've found it has little to do with the things you see and everything to do with the way you see them.</blockquote>
+				<cite>- Elliott Erwitt</cite>
+			</div>
+		</div>
+
+	</section>
+
+	<!--	Photo Section-->
+	<section id="desc">
+		<div class="container1">
+			<h1>Photography: Interpretation of Reality, Art or Simply Entertainment?</h1>
+			<p>We are all accustomed to believe by taking pictures we capture the best moments of our life, and photographs help to recall the events of the past. However, there is much more to tell. A photographer is a painter who depicts his life on a canvas by conveying certain emotions or experiences, and who describes reality the way he or she sees it or wants it to be. So, we cannot always be sure whether a photograph reflects reality with the highest accuracy or vice versa, hides it. Let’s consider a number of current arguments and facts about photography, and find out what it really is.</p>
+		</div>
+		<div class="container2">
+			<img id="image1" src="image/picture12.jpeg">
+		</div>
+	</section>
+	<section id="gallery">
+		<div id="gallery-heading">
+			<h2>
+				<span>G</span>
+				<span>A</span>
+				<span>L</span>
+				<span>L</span>
+				<span>E</span>
+				<span>R</span>
+				<span>Y</span>
+			</h2>
+		</div>
+		<div id="grid">
+			<div class="wrapper">
+				<div class="grid">
+					<div class="image"><span><img src="image/picture1.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture2.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture3.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture4.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture5.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture6.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture7.jpeg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture8.jpeg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture9.jpeg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture10.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture11.jpg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+					<div class="image"><span><img src="image/picture12.jpeg" alt=""></span><span>
+							<p><i class="fas fa-camera"></i> Swastika Ray</p>
+						</span></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="copyright">
+		<p>Copyright <span>&copy;</span> 2021 IN4MALS </p>
+	</div>
+
+	<script src="main.js"></script>
+	
+</body>
+
+</html>

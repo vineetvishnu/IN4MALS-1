@@ -374,7 +374,7 @@ header {
     top: 40%;
   }
   .carousel-caption h1 {
-    font-size: 270%;
+    font-size: 200%;
   }
   .carousel-caption h3 {
     font-size: 130%;
@@ -436,7 +436,7 @@ header {
 	font-size: 20px;
 	text-align: center;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 15px;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 	padding: 10px 30px;

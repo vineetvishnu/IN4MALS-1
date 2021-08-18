@@ -592,6 +592,7 @@ header {
 	border-bottom: 0;
 	box-shadow: 0 19px 38px rgba(100, 0, 0.30), 0 15px 12px rgba(2, 0, 0, 0.22);
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
+	transition: all 1s ease;
 }
 
 #cardW::before {

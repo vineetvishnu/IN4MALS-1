@@ -770,6 +770,23 @@ header {
 	animation-delay: 0.6s;
 
 }
+/*        Back to top btn        */
+.back-to-top {
+	background-color: var(--primary-bg);
+	padding: 10px 12px;
+	color: var(--border-color);
+	font-size: 25px;
+	cursor: pointer;
+	border-radius: 8px;
+	box-shadow: 0 0 7px var(--border-color);
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 100;
+	transition: all .5s ease-in;
+	opacity: 0;
+	transform: translateY(1000px);
+}
 
 
 /*===========================================Footer Section=========================================*/

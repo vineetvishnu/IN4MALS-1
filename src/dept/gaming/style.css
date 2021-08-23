@@ -501,6 +501,8 @@ nav img {
 [class*="col-"] {
     padding: 1rem;
 }
+
+/*----Cards----*/
 .card {
 	color: #fff;
 	border: 3.2px solid;
@@ -509,7 +511,29 @@ nav img {
 	border-image: linear-gradient(to bottom, rgb(0 0 0/ 30%), rgb(255 215 0 / 100%), #ffd700, #000) 10 100%;
 	overflow: hidden;
 }
- 
+
+
+/*        Back to top btn        */
+.back-to-top {
+    background-color: var(--primary-bg);
+    padding: 10px 12px;
+    color: var(--border-color);
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 7px var(--border-color);
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    transition: all .5s ease-in;
+    opacity: 0;
+    transform: translateY(1000px);
+}
+
+
+
+ /*----Copyright----*/
 .copyright p {
 	color: #5589f2;
 	font-family: var(--content-font);
@@ -539,22 +563,6 @@ nav img {
 }
 
 
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
 
 
 
